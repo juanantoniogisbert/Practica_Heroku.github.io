@@ -1,0 +1,61 @@
+version: '3'
+
+services:
+
+  # DJANGO
+  django:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: django
+    # restart: unless-stopped
+    tty: true
+    working_dir: /code
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./:/code
+    networks:
+      - app-network
+
+  #REDIS
+  redis:
+    image: redis:5.0.7
+    container_name: redisDjango
+    tty: true
+    volumes:
+      - redis:/data
+    networks:
+      - app-network
+
+  #POSTGRES
+  postgres:
+    image: postgres:12.1-alpine
+    container_name: postgresdjango
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: hola123
+      POSTGRES_USER: django
+      POSTGRES_DB: djangodb
+    tty: true
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+    ports:
+      - "54320:5432"
+    networks:
+      - app-network
+
+#CONFIGURATION
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  dbdata:
+  redis:
+
+volumes:
+  dbdata:
+    driver: local
+  redis:
+    driver: local
