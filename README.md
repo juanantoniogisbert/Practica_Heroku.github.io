@@ -1,5 +1,12 @@
 - Primer paso instalar heroku cli
 
+Fichero Procfile
+    web: gunicorn djangobackend.wsgi --log-file -
+
+
+Fichero requirements.txt
+    gunicorn
+
 ```
 $ sudo snap install --classic heroku
 ```
@@ -43,9 +50,23 @@ $ git push heroku master
 ```
 ![Alt text](images/capfinal.png)
 
-
 ```
 $ heroku ps:scale web=1
 ```
-![Alt text](images/capfinal.png)
+![Alt text](images/capFun.png)
+
+
+
+```
+https://practicaheroku01.herokuapp.com/admin/login/?next=/admin/
+```
+cunat funcione
+![Alt text](images/.png)
+
+Diins de practica resources/Heroku Postgres/Settings
+
+Configuracion de settings
+
+![Alt text](images/capSetings.png)
+
 
