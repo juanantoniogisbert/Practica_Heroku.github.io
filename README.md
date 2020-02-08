@@ -63,10 +63,19 @@ https://practicaheroku01.herokuapp.com/admin/login/?next=/admin/
 cunat funcione
 ![Alt text](images/.png)
 
-Diins de practica resources/Heroku Postgres/Settings
+Dins de practica resources/Heroku Postgres/Settings
 
 Configuracion de settings
 
 ![Alt text](images/capSetings.png)
 
+practicaheroku01/More/Run Console
 
+![Alt text](images/superuser.png)
+
+
+![Alt text](images/hotels.png)
+
+![Alt text](images/addons.png)
+
+![Alt text](images/installaddon.png)
