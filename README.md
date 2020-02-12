@@ -60,8 +60,8 @@ $ heroku ps:scale web=1
 ```
 https://practicaheroku01.herokuapp.com/admin/login/?next=/admin/
 ```
-cunat funcione
-![Alt text](images/.png)
+cuant funcione
+<!-- ![Alt text](images/.png) -->
 
 Dins de practica resources/Heroku Postgres/Settings
 
@@ -79,3 +79,10 @@ practicaheroku01/More/Run Console
 ![Alt text](images/addons.png)
 
 ![Alt text](images/installaddon.png)
+
+
+Start
+```
+$ heroku local web
+```
+![Alt text](images/local.png)
