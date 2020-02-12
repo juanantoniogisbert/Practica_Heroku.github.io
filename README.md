@@ -60,8 +60,6 @@ $ heroku ps:scale web=1
 ```
 https://practicaheroku01.herokuapp.com/admin/login/?next=/admin/
 ```
-cuant funcione
-<!-- ![Alt text](images/.png) -->
 
 Dins de practica resources/Heroku Postgres/Settings
 
@@ -76,6 +74,8 @@ practicaheroku01/More/Run Console
 ![Alt text](images/despHero.png)
 
 ![Alt text](images/hotels.png)
+
+Configutación 
 
 ![Alt text](images/addons.png)
 
