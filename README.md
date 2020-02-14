@@ -82,10 +82,16 @@ Configutación
 ![Alt text](images/installaddon.png)
 
 
-Start
+A continuación vamos a realizar una prueba de aplicación en entorno local.
+
+Para ello ejecutamos el siguiente comando.
 ```
 $ heroku local web
 ```
-![Alt text](images/local1.png)
+![Alt text](images/local1.png) 
+
+Pantalla de login.
 
 ![Alt text](images/local.png)
+
+Pantalla de administración (Después de iniciar sesión)
