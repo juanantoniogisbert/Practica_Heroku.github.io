@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import dj_database_url
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -85,16 +87,18 @@ WSGI_APPLICATION = 'djangobackend.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 print(os.environ['DATABASE_HOST'])
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql', 
-        'NAME': 'ddkakh31l82q92',
-        'USER': 'qvnpuwbhtdbfdx',
-        'PASSWORD': '5ec51e7b97a504a46495f80794c8da1f64591cb2fcae422f8cba616b85960bcb',
-        'HOST': os.environ['DATABASE_HOST'],
-        'PORT': '5432',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql', 
+#         'NAME': 'ddkakh31l82q92',
+#         'USER': 'qvnpuwbhtdbfdx',
+#         'PASSWORD': '5ec51e7b97a504a46495f80794c8da1f64591cb2fcae422f8cba616b85960bcb',
+#         'HOST': os.environ['DATABASE_HOST'],
+#         'PORT': '5432',
+#     }
+# }
+
+DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
 AUTH_USER_MODEL = 'authentication.User'
 
