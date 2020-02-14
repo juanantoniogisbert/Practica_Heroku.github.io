@@ -19,7 +19,6 @@ $ heroku login
 ![Alt text](images/terminalLogin.png)
 ![Alt text](images/cap3.png)
 ![Alt text](images/capLoginBrow.png)
-![Alt text](images/capLoginBrow.png)
 
 Creem el repositori 
 añadim projecte 

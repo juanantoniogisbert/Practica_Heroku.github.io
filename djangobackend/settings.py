@@ -83,6 +83,7 @@ WSGI_APPLICATION = 'djangobackend.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
+print(os.environ['DATABASE_HOST'])
 
 DATABASES = {
     'default': {
