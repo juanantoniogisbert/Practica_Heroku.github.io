@@ -62,7 +62,8 @@ https://practicaheroku01.herokuapp.com/admin/login/?next=/admin/
 
 Dins de practica resources/Heroku Postgres/Settings
 
-Configuracion de settings
+Configuracion de varibles:
+Preguntali a alejadro perque jo no tinc ni puta idea (soc juanan)
 
 ![Alt text](images/capSetings.png)
 
