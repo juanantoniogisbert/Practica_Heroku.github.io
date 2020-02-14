@@ -63,7 +63,35 @@ https://practicaheroku01.herokuapp.com/admin/login/?next=/admin/
 Dins de practica resources/Heroku Postgres/Settings
 
 Configuracion de varibles:
-Preguntali a alejadro perque jo no tinc ni puta idea (soc juanan)
+
+A continuación se muestra el proceso para configurar variables de entornos.
+
+En primer lugar la añadiremos en la web de configuración de Heroku. En nuestro caso indicamos el host para acceder a la base de datos.
+
+![Envvar](images/envvarsremote.png)
+
+Para utilizarla en el servidor remoto deberemos indicarla en el código a traves de `os.environ['DATABASE_HOST']` En nuestro caso el código quedaría así...
+
+```python
+import os
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql', 
+        'NAME': 'ddkakh31l82q92',
+        'USER': 'qvnpuwbhtdbfdx',
+        'PASSWORD': '5ec51e7b97a504a46495f80794c8da1f64591cb2fcae422f8cba616b85960bcb',
+        'HOST': os.environ['DATABASE_HOST'],
+        'PORT': '5432',
+    }
+}
+```
+
+Para utilizarla en local bastará con crear un fichero .env con el siguiente contenido:
+```
+DATABASE_HOST=ec2-54-246-89-234.eu-west-1.compute.amazonaws.com
+```
+
 
 ![Alt text](images/capSetings.png)
 
