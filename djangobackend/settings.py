@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-import psycopg2
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -85,20 +84,17 @@ WSGI_APPLICATION = 'djangobackend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql', 
-#         'NAME': 'ddkakh31l82q92',
-#         'USER': 'qvnpuwbhtdbfdx',
-#         'PASSWORD': '5ec51e7b97a504a46495f80794c8da1f64591cb2fcae422f8cba616b85960bcb',
-#         'HOST': os.environ['DATABASE_HOST'],
-#         'PORT': '5432',
-#     }
-# }
 
-DATABASE_HOST = os.environ['DATABASE_HOST']
-
-conn = psycopg2.connect(DATABASE_HOST, sslmode='require')
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql', 
+        'NAME': 'ddkakh31l82q92',
+        'USER': 'qvnpuwbhtdbfdx',
+        'PASSWORD': '5ec51e7b97a504a46495f80794c8da1f64591cb2fcae422f8cba616b85960bcb',
+        'HOST': os.environ['DATABASE_HOST'],
+        'PORT': '5432',
+    }
+}
 
 AUTH_USER_MODEL = 'authentication.User'
 
