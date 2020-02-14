@@ -75,9 +75,15 @@ practicaheroku01/More/Run Console
 
 ![Alt text](images/hotels.png)
 
-Configutación 
+- Instalación y configuración de Add-ons necesarios via Heroku CLI
+
+Automaticamente al crear nuestra aplicación en Heroku nos ha instalado automaticamente el Add-on de "Heroku Postgres", ahora te esplicaremos el proceso de instalación.
 
 ![Alt text](images/addons.png)
+
+Entraremos en nuesta aplicación y en la pestaña de "Resources" pulsaremos en el boton de "Find more add-ons"
+
+Buscamos el Add-on que necessitemos y pulsamos sobre el boton "Install Heroku Postgres".
 
 ![Alt text](images/installaddon.png)
 
